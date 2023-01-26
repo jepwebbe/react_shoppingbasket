@@ -33,7 +33,6 @@ const Products = () => {
               <span>{returnAmount(item.id)}</span>
             </li>
           ))}
-          <button onClick={() => setEmptyCart()}>TØM</button>
         </ul>
   )
 }

@@ -20,11 +20,6 @@ const ShoppingCart = () => {
       <ul>
         {cartItems.map((item, ind) => (
           <li key={ind}>
-            <p>
-              {item.amount} stk {item.title} til {item.price} stk, i alt{" "}
-              {item.amount * item.price}
-            </p>
-            <button onClick={() => setDeleteItem(item.id)}>Fjern</button>
             <button
               onClick={() =>
                 increaseCartQuantity(item.id, item.price, 1, item.title)
@@ -32,6 +27,7 @@ const ShoppingCart = () => {
             >
               +
             </button>
+            <p>{item.amount}</p>
             <button
               onClick={() =>
                 returnAmount(item.id) > 1
@@ -41,6 +37,12 @@ const ShoppingCart = () => {
             >
               -
             </button>
+            <p>
+              {" "}
+              stk {item.title} til {item.price} stk, i alt{" "}
+              {item.amount * item.price}
+            </p>
+            <button onClick={() => setDeleteItem(item.id)}>X</button>
           </li>
         ))}
       </ul>
@@ -50,6 +52,7 @@ const ShoppingCart = () => {
           {cartItems.reduce((a, b) => a + b.amount * b.price, 0) + "kr"}
         </span>
       </p>
+      <button onClick={() => setEmptyCart()}>Tøm kurven</button>
     </CartStyled>
   );
 };
@@ -57,7 +60,10 @@ const ShoppingCart = () => {
 const CartStyled = styled.article`
   width: 400px;
   height: 500px;
-  overflow-y:scroll;
+  overflow-y: scroll;
   background-color: green;
+  ul li {
+    display: flex;
+  }
 `;
 export default ShoppingCart;

@@ -16,8 +16,10 @@ const Home = () => {
       <HeroStyled>Hero</HeroStyled>
       <MainStyled>
         <h2>Main - med Zustand</h2>
-        <Products />
-        <ShoppingCart />
+        <div>
+          <Products />
+          <ShoppingCart />
+        </div>
       </MainStyled>
       <FooterStyled>Footer</FooterStyled>
     </GridOne>
