@@ -37,9 +37,7 @@ const ShoppingCart = () => {
             >
               -
             </button>
-            <p>
-              {" "}
-              stk {item.title} til {item.price} stk, i alt{" "}
+            <p>    stk {item.title} til {item.price} stk, i alt{" "}
               {item.amount * item.price}
             </p>
             <button onClick={() => setDeleteItem(item.id)}>X</button>
@@ -61,9 +59,22 @@ const CartStyled = styled.article`
   width: 400px;
   height: 500px;
   overflow-y: scroll;
-  background-color: green;
-  ul li {
+  background-color: blue;
+  ul {
+    padding-left: 0;    
+    li {
     display: flex;
-  }
+    padding: 1rem;
+    p {
+        margin: 0;
+    }
+    button {
+        line-height: 1;
+        height: 100%;
+    }
+    button:last-of-type {
+        margin-left: auto;
+    }
+  }}
 `;
 export default ShoppingCart;

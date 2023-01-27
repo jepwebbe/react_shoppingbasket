@@ -1,12 +1,12 @@
 import React, { useState } from "react";
+import styled from 'styled-components'
 import useGetApiDataFromEnpoint from "../../../Hooks/useGetApiDataFromEnpoint";
 import { useShoppingCartStore } from "../../ShoppingCart/useShoppingCart/useShoppingCart";
-import Search from "./Search";
+import Search from "../../Search/Search";
 
 const Products = () => {
   const { state: products } = useGetApiDataFromEnpoint("products", "items");
   const [searchResults, setSearchResults] = useState([]);
-  console.log(searchResults)
   const {
     cartItems,
     setDeleteItem,
@@ -21,7 +21,7 @@ const Products = () => {
   };
 
   return (
-    <>
+    <StyledProducts>
       <Search
         products={products}
         searchResults={searchResults}
@@ -62,8 +62,14 @@ const Products = () => {
           </li>
         ))}
       </ul>
-    </>
+    </StyledProducts>
   );
 };
+
+const StyledProducts = styled.section`
+ul {
+  padding-left: 0;
+}
+`
 
 export default Products;

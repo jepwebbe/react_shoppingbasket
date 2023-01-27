@@ -15,8 +15,7 @@ const Search = ({ products, searchResults, setSearchResults }) => {
       item.title.toLowerCase().includes(searchTerm.toLowerCase())
     );
     setSearchResults(results)
-    console.log(results)
-    results == 0 ? setnoResults(true)  : setnoResults(false)
+    results < [0] ? setnoResults(true)  : setnoResults(false)
   };
 
   return (
@@ -28,7 +27,7 @@ const Search = ({ products, searchResults, setSearchResults }) => {
         onChange={handleChange}
       />
       <button type="submit">Search</button>
-      {noResults  ? <p>Ingen resultater</p> : null}
+      {noResults  ? <p>Din søgning gav ingen resultater</p> : null}
 
     </form>
   );

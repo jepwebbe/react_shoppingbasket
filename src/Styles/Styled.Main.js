@@ -8,6 +8,7 @@ export const MainStyled = styled.main`
     display: flex;
     justify-content: space-around;
   }
-  ul li {
+  h2 {
+    text-align: center;
   }
 `;
