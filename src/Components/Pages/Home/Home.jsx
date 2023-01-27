@@ -7,7 +7,7 @@ import { HomeStyled } from "../../../Styles/Styled.Home";
 import { MainStyled } from "../../../Styles/Styled.Main";
 import ShoppingCart from "../../ShoppingCart/ShoppingCart";
 import { useShoppingCartStore } from "../../ShoppingCart/useShoppingCart/useShoppingCart";
-import Products from "./Products";
+import Products from "../Products/Products";
 
 const Home = () => {
   return (
