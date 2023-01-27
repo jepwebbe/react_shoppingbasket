@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import styled from 'styled-components'
 import useGetApiDataFromEnpoint from "../../../Hooks/useGetApiDataFromEnpoint";
-import { useShoppingCartStore } from "../../ShoppingCart/useShoppingCart/useShoppingCart";
-import Search from "../../Search/Search";
+import Search from "../../Partials/Search/Search";
+import { useShoppingCartStore } from "../../Partials/ShoppingCart/useShoppingCart/useShoppingCart";
 
 const Products = () => {
   const { state: products } = useGetApiDataFromEnpoint("products", "items");

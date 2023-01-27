@@ -5,8 +5,7 @@ import { FooterStyled } from "../../../Styles/Styled.Footer";
 import { HeroStyled } from "../../../Styles/Styled.Hero";
 import { HomeStyled } from "../../../Styles/Styled.Home";
 import { MainStyled } from "../../../Styles/Styled.Main";
-import ShoppingCart from "../../ShoppingCart/ShoppingCart";
-import { useShoppingCartStore } from "../../ShoppingCart/useShoppingCart/useShoppingCart";
+import ShoppingCart from "../../Partials/ShoppingCart/ShoppingCart";
 import Products from "../Products/Products";
 
 const Home = () => {
